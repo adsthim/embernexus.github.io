@@ -90,7 +90,15 @@ p.related a:hover {
   text-decoration: underline;
 }
 
-
+.Button:hover {
+  background: #f41f83;
+  box-shadow: 0 8px 65px -5px #CD106E;
+}
+.Button:active {
+  background: #CD106E;
+  box-shadow: 0 10px 60px -10px #CD106E;
+  transform: perspective(250px) scale3d(1, 1, 1) translateY(5%) !important;
+}
 .iklan {
   position: fixed;
   bottom: 0;
