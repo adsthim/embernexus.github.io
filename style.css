@@ -61,6 +61,10 @@ body {
   margin: auto;
 }
 
+.boxside .contentside {
+ margin-left: 15%; 
+}
+
 h1, h2, a, p {
   color: white;
   font-weight: 100;
