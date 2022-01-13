@@ -68,7 +68,8 @@ body {
   height: 300px;
   left: -webkit-calc( 10%  );
   top: 40%;
-  position: absolute;
+    position: relative;
+  left: 30px;
   border-radius: 5px;
   -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
@@ -82,6 +83,7 @@ body {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
   display: flex;
   transition: box-shadow .3s ease;
+  
 }
 .sideboxbox:active {
   cursor: move;
@@ -90,7 +92,7 @@ body {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
 }
 .sidebox .sidecontent {
-  margin: 50px;
+  margin: auto;
 }
 
 /*yes*/
