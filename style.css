@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,400,700);
 body {
-  background-image: url("1-patagonia-sunrise-helminadia.jpg");
+  background-image: url("photo.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -8,7 +8,7 @@ body {
 }
 
 .blurred-bg {
-  background-image: url("1-patagonia-sunrise-helminadia.png");
+  background-image: url("PhotoBlur.png");
   background-repeat: no-repeat;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -17,18 +17,18 @@ body {
   background-attachment: fixed;
 }
 .blurred-bg.tinted {
-  background-image: url('1-patagonia-sunrise-helminadia.png'), url("1-patagonia-sunrise-helminadia.png");
+  background-image: url('PhotoBlur.png'), url("PhotoBlur.png");
   background-size: 100%;
   background-image: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("1-patagonia-sunrise-helminadia.png");
-  background-image: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("1-patagonia-sunrise-helminadia.png");
-  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("1-patagonia-sunrise-helminadia.png");
+  background-image: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("PhotoBlur.png");
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("PhotoBlur.png");
 }
 .blurred-bg.shaded {
-  background-image: url('1-patagonia-sunrise-helminadia.png'), url("1-patagonia-sunrise-helminadia.png");
+  background-image: url('PhotoBlur.png'), url("PhotoBlur.png");
   background-size: 100%;
-  background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("1-patagonia-sunrise-helminadia.png");
-  background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("1-patagonia-sunrise-helminadia.png");
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("1-patagonia-sunrise-helminadia.png");
+  background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("PhotoBlur.png");
+  background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("PhotoBlur.png");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("PhotoBlur.png");
 }
 
 .box {
