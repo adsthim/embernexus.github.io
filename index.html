@@ -186,10 +186,23 @@ function popup(message) {
         }
     }
 </script>
-<script type="text/javascript" src="http://www.queness.com/assets/js/demo.js"></script>	
+	
+		<script type="text/javascript">
+	$ips = array("149.19.54.35", "192.168.1.46");
+	
+if(!in_array($_SERVER['REMOTE_ADDR'], $ips))
+{
+  header("HTTP/1.1 401 Unauthorized");
+  exit;
+}
+	
+	</script>
+
+
 <!-- END -->
 </head>
 <body>
+
 	<!-- onload="popup('<p>You can pass html code to it as well:</p><ul><li>List item 1</li><li>List item 2</li><li>List item 3</li><li>List item 4</li></ul>')" -->
 	
 	
