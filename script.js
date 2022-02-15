@@ -2,7 +2,7 @@ $(function() {
 	$( ".box" ).draggable();
 });
 
-function submitting(){
+$(function submitting(){
     var pinput = document.getElementById("passinput");
     var pvalue = pinput.value;
 
@@ -12,4 +12,4 @@ function submitting(){
     } else{
         alert("Invalid Password");
     }
-}
+});
