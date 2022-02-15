@@ -1,9 +1,9 @@
 //DOCTYPE JS
 
 //Security Login
-<!-- if (password_input) = embernexusencode158362:
-<!--    set login_status = [id=_true]
-<!--    $load MainPage.html
+//<!--// if (password_input) = embernexusencode158362:
+//<!--//    set login_status = [id=_true]
+//<!--//    $load MainPage.html
 
 
 
