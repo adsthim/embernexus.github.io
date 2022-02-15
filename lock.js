@@ -30,7 +30,7 @@ function gameloaded(){
     if (allowed == "true"){
         document.getElementById("gameframe").src = "nav.html"
     }else{
-        document.getElementById("gameframe").src = "https://www.youtube.com/embed/QDia3e12czc"
+        document.getElementById("gameframe").src = "https://www.youtube.com/embed/xvFZjo5PgG0"
         alert("please enter the password first")
     }
     localStorage.removeItem("allowed")
