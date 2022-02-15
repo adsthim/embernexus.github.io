@@ -27,9 +27,11 @@ function submitting(){
 
 function gameloaded(){
     var allowed = localStorage.getItem("allowed")
+    var hideSpan = document.getElementByClassName('hide')[0];
     if (allowed == "true"){
         document.getElementById("gameframe").src = "nav.html"
     }else{
+        noSpan.style.display = 'inline-block';
         document.getElementById("gameframe").src = "https://www.youtube.com/embed/xvFZjo5PgG0"
         alert("please enter the password first")
     }
