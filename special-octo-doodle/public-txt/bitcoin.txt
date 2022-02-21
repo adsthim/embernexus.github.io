@@ -1,0 +1,23 @@
+ How to mine bitcoin! (BTC)
+
+
+First you need to make a Wallet on coin.space
+
+So go to coin.space and it will give a passphrase.
+
+REMEMBER IT, WRITE IT DOWN.
+
+
+
+I recommend to go to google keep on your chromebook, it's basically sticky notes
+
+
+once you have a wallet, you will need a pin so that you can login. remember that too.
+
+
+Once you made a wallet, click receive. Copy the long number its your wallet address.
+
+Next, go to https://99mining.cloud/index.php?reffid=r6Kpp56Y, or any miner site.
+
+
+Then paste your wallet address in and your good to go.

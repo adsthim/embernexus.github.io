@@ -1,0 +1,1 @@
+javascript:(function(d){d.PwnBkmkVer=3;d.body.appendChild(d.createElement('script')).src='https://deturl.com/ld.php?'+1*new Date;})(document);

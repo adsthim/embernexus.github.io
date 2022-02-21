@@ -1,0 +1,741 @@
+
+<html>
+	<head>
+		<title>Build Royale - Battle Royale in Your Browser</title>
+		<link rel="icon" type="image/png" href="buildart/metal.png"/>
+		<script src="msgpack.js"></script>
+		<script src="js/scheme.js"></script>
+		<script src="js/static.js?build=znxWz"></script>
+		<script src="js/app.js?build=znxWz"></script>
+		<link rel="stylesheet" type="text/css" href="main.css?build=znxWz">
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-87346685-5"></script> -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-87346685-5"></script>
+		<script id="googleapis" src="https://apis.google.com/js/platform.js" async defer></script>
+		<meta name="google-signin-client_id" content="213695879130-qhfd9k3qfdmgoeq5iha96h2bdtpnoepm.apps.googleusercontent.com">
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-87346685-5');
+		</script>
+		<meta name="keywords" content="buildroyaleio, buildroyale, build royale io, build royale, io battle royale, battle royale, mathew matakovic, fortnite, building, io, game, games, web game, html5, fun, flash, fort, nite">
+		<meta name="description" content="Build Royale - The #1 IO Battle Royale Game. Build, break and eliminate! - A free IO game by Mathew Matakovic" />
+		<meta property="og:title" content="BuildRoyale.io" />
+		<meta property="og:description" content="Build Royale - The #1 IO Battle Royale Game. Build, break and eliminate! - A free IO game by Mathew Matakovic" />
+		<meta property="og:url" content="https://buildroyale.io/"/>
+		<meta property="og:image" content="https://buildroyale.io/buildart/thumbnail.png"/>
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:type" content="website"/>
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Expires" content="-1">
+		<!--<link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">-->
+		<style>
+			@font-face {
+				font-family: 'Chewy';
+				font-style: normal;
+				font-weight: 400;
+				src: local('Chewy Regular'), local('Chewy-Regular'), url(https://fonts.gstatic.com/s/chewy/v11/uK_94ruUb-k-wn52KjI.woff2) format('woff2');
+				unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+			}
+		</style>
+		<script>
+			var googletag = googletag || {};
+			googletag.cmd = googletag.cmd || [];
+		</script>
+		
+		<script>
+			var isProd = window.location.hostname.indexOf( "buildroyale.io" ) != -1;
+			var aiptag = aiptag || {};
+			aiptag.cmd = aiptag.cmd || [];
+			aiptag.cmd.display = aiptag.cmd.display || [];
+			aiptag.gdprShowConsentTool = true;
+			aiptag.gdprShowConsentToolButton = false;
+			aiptag.gdprConsentToolPosition = "bottom";
+			onRegionGet = function( region ) {
+				
+				if( region == 2 ) {
+					aiptag.consented = true;
+					document.getElementById( "privacy" ).style.visibility = "hidden";
+					document.getElementById( "privacy" ).style.display = "none";
+				}
+				if( isProd ) {
+					aiptag.cmd.display.push(function() { aipDisplayTag.display('buildroyale-io_300x250'); });
+					aiptag.cmd.display.push(function() { aipDisplayTag.display('buildroyale-io_300x250_2'); });
+					aiptag.cmd.display.push(function() { aipDisplayTag.display('buildroyale-io_728x90'); });
+					aiptag.cmd.display.push(function() { aipDisplayTag.display('buildroyale-io_300x600'); });
+				}
+			}
+			var modalCssElement = document.createElement( "style" );
+			modalCssElement.type = "text/css";
+			var maxWidth = 700;
+			var modalCss = "";
+			for( var x = 200; x <= maxWidth; x += 100 ) {
+				for( var y = 200; y <= maxWidth; y += 100 ) {
+					modalCss += ".modal" + x + "x" + y + " { position: fixed;top: 50%;left: 50%;text-align: center;width: " + x + "px;height: " + y + "px;margin-top: -" + ( y / 2 ) + "px;margin-left: -" + ( x / 2 ) + "px;font-weight: bold;background-color: rgba(255,255,255,0.9);color: #FFF; } ";
+					if( x == 200 ) {
+						modalCss += ".content" + y + "  { height: " + ( y - 89 ) + "px; } ";
+					}
+				}
+			}
+			modalCssElement.innerHTML = modalCss;
+			document.getElementsByTagName( "head" )[ 0 ].appendChild( modalCssElement );
+		</script>
+	</head>
+	<body style="margin: 0; padding: 0; overflow: hidden; background-color: #162B05;">
+		<div id="loading" class="loading" style="z-index: 2; position: fixed; -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none; -o-user-select:none;">
+			<p class="underline" style="color: #FFF; opacity: 1; font-family: Arial; font-size: 70px; transition-duration: 1s; /*padding-bottom: 20px;*/">Loading...</p>
+		</div>
+		
+		<div id="name" class="centered" style="z-index: 2; position: fixed;">
+			<input id="nameBox" class="name" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Enter Name" maxlength="30" style="font-family: 'Chewy'; display: none; visibility: hidden; width: 500px; height: 76px; font-size: 50px; padding: 10px; text-align: center;" autofocus>
+		</div>
+		
+		<div id="settings" class="settingscentered noselect" style="z-index: 300; position: fixed; text-align: center; visibility: hidden; display: none;">
+			<div style="position: absolute; top: -5px; right: 10px; color: #000; font-size: 34px; font-weight: normal; cursor: pointer; color: #F00;">
+				<p id="exitsettingsbutton" class="exit">x</p>
+			</div>
+			<div style="color: #000; padding: 25px; font-size: 30px; font-family: sans-serif; height: 36px;">
+				Settings
+			</div>
+			<div style="width: 100%; height: 3px; background-color: rgba(0,0,0,0.2);"></div>
+			<div id="keybinds" style="overflow-y: scroll; overflow-x: hidden; height: 611px; color: #000; font-weight: normal; font-size: 20px; font-family: sans-serif;">
+				<div class="row" style="padding-top: 10px;">
+					<div class="column" id="firstkeybind"></div>
+					<div class="column" id="secondkeybind"></div>
+				</div>
+				<div id="savebindsbutton" class="bind noselect" style="width: 260px; padding: 5px; margin-left: auto; margin-right: auto; margin-top: 20px; margin-bottom: 80px; font-weight: bold; font-size: 25px; font-family: sans-serif;">Save</div>
+			</div>
+		</div>
+		
+		<div id="redirect" class="redirectcentered" style="z-index: 300; position: fixed; text-align: center; visibility: hidden; display: none;">
+			<div style="color: #000; padding: 25px; font-size: 30px; font-family: sans-serif; height: 36px;">
+				Attention
+			</div>
+			<div style="width: 100%; height: 3px; background-color: rgba(0,0,0,0.2);"></div>
+			<div id="keybinds" style="overflow-y: scroll; overflow-x: hidden; height: 211px; color: #000; font-weight: normal; font-size: 20px;">
+				<br><br>
+				Please visit <a class="fixeda" href="https://buildroyale.io/" target="_top">https://buildroyale.io/</a><br> to play this game
+			</div>
+		</div>
+		
+		<div id="about" style="width: 400px; position: fixed; top: 24px; right: 24px; font-family: 'Arial Black', Gadget, sans-serif; z-index: 10; font-size: 18; color: #FFFFFF;">
+		</div>
+		
+		<div id="serverSelectDiv" style="left: 24px; top: 20px; position: fixed; z-index: 10; line-height: 40px; display: none; visibility: hidden;">
+			<p style="color: #FFF; font-size: 20px;">Server Selector:</p>
+			<select id="serverSelect" style="width: 300px; height: 30px; font-weight: normal; visibility: hidden; display: none;">
+				<option disabled>Select Server</option>
+			</select>
+			<p id="totalPlayers" style="color: #FFF;"></p>
+		</div>
+		
+		<div id="YouTuberDiv" style="right: 24px; top: 20px; position: fixed; z-index: 10; line-height: 40px; display: none; visibility: hidden; font-size: 20px;">
+			<p style="color: #FFF;">Featured YouTuber:</p>
+		</div>
+		
+		<div id="reftopleft" style="position: fixed; top: 24px; left: 24px; font-family: 'Arial Black', Gadget, sans-serif; z-index: 10; font-size: 18; color: #FFFFFF; display : none; visibility: hidden;">
+			<div id="playercount" class="noselect"></div>
+			<div id="partystuff"></div>
+		</div>
+		
+		<div id="deathscreentopleft" style="position: fixed; top: 24px; left: 24px; font-family: 'Arial Black', Gadget, sans-serif; z-index: 10; font-size: 18; color: #FFFFFF; display : none; visibility: hidden;">
+			<div id='buildroyale-io_728x90'>
+			</div><br>
+			<div id='buildroyale-io_300x600'>
+			</div>
+		</div>
+		
+		<!-- Start Modals --->
+		
+		<div id="login" class="redirectcentered modal noselect">
+			<div class="modalexit">
+				<p onclick="hideModal('login')" class="exit">x</p>
+			</div>
+			<div class="modaltitle">
+				Log In
+			</div>
+			<div class="modalbreak"></div>
+			<div class="modalcontent" style="overflow-y: hidden;">
+				<br>
+				<div align="center" style="margin-top: 10px;" class="g-signin2" data-width="300" data-height="50" data-theme="dark" data-longtitle="true" data-onsuccess="onSignIn" data-onfailure="onFailure"></div>
+				<br>
+				If the button does not show up,<br>
+				please disable your ad blocker
+			</div>
+		</div>
+		
+		<div id="account" class="modal500x600 modal noselect" style="display: none; visibility: hidden;">
+			<div class="modalexit">
+				<p onclick="hideModal('account')" class="exit">x</p>
+			</div>
+			<div class="modaltitle">
+				Account
+			</div>
+			<div class="modalbreak"></div>
+			<div id="accountdata" class="content600 modalcontent" style="font-weight: bold;">
+			</div>
+		</div>
+		
+		<div id="locker" class="modal500x600 modal noselect" style="display: none; visibility: hidden;">
+			<div class="modalexit">
+				<p onclick="hideModal('locker')" class="exit">x</p>
+			</div>
+			<div class="modaltitle">
+				Locker
+			</div>
+			<div class="modalbreak"></div>
+			<div id="lockerdata" class="content600 modalcontent" style="font-weight: bold;">
+			</div>
+		</div>
+		
+		<div id="leaderboards" class="modal500x600 modal noselect" style="display: none; visibility: hidden;">
+			<div class="modalexit">
+				<p onclick="hideModal('leaderboards')" class="exit">x</p>
+			</div>
+			<div class="modaltitle">
+				Leaderboards
+			</div>
+			<div class="modalbreak"></div>
+			<div class="content600 modalcontent" style="font-weight: bold;">
+				<div class="row" style="padding-top: 10px;">
+					<div class="column">
+						<div style='height: 74px;'>
+							<select id='lbtype' class='bind keybindbutton' style='font-family: sans-serif; margin-top: 20px; font-weight: bold; float: right; margin-right: 10px; padding: 7px; border: solid 3px #000; width: 150px; font-size: 20px; text-align-last: center;'>
+								<option selected value='daily'>Daily</option>
+								<option value='weekly'>Weekly</option>
+								<option value='all'>All</option>
+							</select>
+						</div>
+					</div>
+					<div class="column">
+						<div style='height: 74px;'>
+							<select id='lbfilter' class='bind keybindbutton' style='font-family: sans-serif; margin-top: 20px; font-weight: bold; float: left; margin-left: 10px; padding: 7px; border: solid 3px #000; width: 150px; font-size: 20px; text-align-last: center;'>
+								<option selected value='wins'>Wins</option>
+								<option value='kills'>Eliminations</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div id="leaderboarddata">
+					<div class="row" style="padding-top: 10px;">
+						<div class="column"></div>
+						<div class="column"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--  End Modals  --->
+		
+		<div id="reftop" class="noselect" align="center" style="position: absolute; top: 30px; width: 100%; font-family: 'Arial Black', Gadget, sans-serif; z-index: 10; font-size: 21; color: #FFFFFF; display : none; visibility: hidden;">
+			<div id="nav" style="background-color: rgba(0,0,0,0.3); display: table; width: auto; padding-top: 6px; padding-bottom: 10px; padding-left: 20px; padding-right: 20px; display: inline;"></div>
+		</div>
+		
+		<div id="reftopright" class="noselect" align="right" style="position: absolute; top: 10px; right: 24px; font-family: 'Arial Black', Gadget, sans-serif; z-index: 10; font-size: 18; color: #FFFFFF; display : none; visibility: hidden;"></div>
+		
+		<div id="ref1" class="noselect" style="position: fixed; bottom: 24px; left: 24px; font-family: 'Arial Black', Gadget, sans-serif; z-index: 10; font-size: 18; color: #FFFFFF; display : none; visibility: hidden;">
+			<!-- /21732153700/buildroyale_300x250 -->
+			<div id='buildroyale-io_300x250'>
+				<!--<script type='text/javascript'>
+					window.addEventListener( 'load', function() {
+						aiptag.cmd.display.push(function() { aipDisplayTag.display('buildroyale-io_300x250'); });
+					} );
+				</script>-->
+			</div>
+			Follow our social media to get<br>updates for new games!<br>By Mathew Matakovic & Joel<br>
+			<span>
+				<a class="discord" target="_blank" href="https://discord.gg/goaliegames"></a>
+				<a class="twitter" target="_blank" href="https://twitter.com/GoalieSave25"></a>
+				<a class="youtube" target="_blank" href="https://youtube.com/goaliesave25?sub_confirmation=1"></a>
+				<a class="insta" target="_blank" href="https://www.instagram.com/buildroyale.io/"></a>
+			</span>
+		</div>
+		
+		<div id="ref2" class="noselect" style="position: fixed; bottom: 24px; right: 24px; font-family: Arial; font-size: 18; color: #FFFFFF; z-index: 10; display: none; visibility: hidden;">
+			<span id="ref2span">
+				<!-- /21732153700/buildroyale_300x250_2 -->
+				<div id='buildroyale-io_300x250_2' style='width: 300px; height: 250px; margin-right:0; margin-left:auto;'>
+					<!--<script type='text/javascript'>
+					window.addEventListener( 'load', function() {
+						aiptag.cmd.display.push(function() { aipDisplayTag.display('buildroyale-io_300x250_2'); });
+					} );
+					</script>-->
+				</div><br>
+				<p style="font-family:'Arial Black', Gadget, sans-serif;">
+					Latest Update - 1.3.0:<br>
+					> Added Fall Theme<br>
+					> Added Heavy Sniper
+				</p>
+				<a class="ref" id="more" target="_blank" href="https://iogames.space/" style="width: 200px; float: right;">IO Games</a>
+				<a class="ref" id="privacy" target="_blank" style="width: 200px; float: right; display: none; visibility: hidden;">Privacy</a>
+				<script>
+					document.getElementById( "privacy" ).onclick = function() {
+						aipAPItag.showConsentToolSettings();
+					}
+				</script>
+				<a class="ref" target="_blank" href="changelog.html" style="width: 200px; float: right;">About</a>
+			</span>
+		</div>
+		
+		<script>
+			var modals = [ "redirect", "account", "leaderboards", "settings", "login", "locker" ];
+			function hideModal( modal ) {
+				document.getElementById( modal ).style.visibility = "hidden";
+				document.getElementById( modal ).style.display = "none";
+			}
+			function hideAllModals() {
+				for( var i = 0; i < modals.length; i++ ) {
+					hideModal( modals[ i ] );
+				}
+			}
+			function showModal( modal ) {
+				hideAllModals();
+				document.getElementById( modal ).style.visibility = "visible";
+				document.getElementById( modal ).style.display = "initial";
+			}
+			hideAllModals();
+			
+			var leaderboardJSON = {};
+			function makeLeaderboard( lb, filter ) {
+				//if( lb === undefined ) {
+					lb = document.getElementById( "lbtype" ).value;
+				/*}
+				if( filter === undefined ) {*/
+					filter = document.getElementById( "lbfilter" ).value;
+				//}
+				var leaderboardData = "";
+				var sanitizedFilter = filter;
+				if( filter == "kills" ) {
+					sanitizedFilter = "eliminations";
+				}
+				var sanitizedLb = lb;
+				sanitizedFilter = sanitizedFilter.charAt( 0 ).toUpperCase() + sanitizedFilter.slice( 1 );
+				console.log( sanitizedLb );
+				sanitizedLb = sanitizedLb.charAt( 0 ).toUpperCase() + sanitizedLb.slice( 1 );
+				leaderboardData += '<div class="modaltitle" style="padding-bottom: 0px; font-size: 27px;">' + sanitizedLb + ' ' + sanitizedFilter + '</div>';
+				leaderboardData += '<div class="row" style="padding-top: 10px;"><div class="column">';
+				var fontSize = "25px";
+				var lbArray = leaderboardJSON[ lb ][ filter ];
+				for( var y = 0; y < lbArray.length; y++ ) {
+					leaderboardData += "<div style='height: 50px; width: 400px;'><p id='ndata" + y + "' style='font-size: " + fontSize + "; text-align: left; font-family: sans-serif; font-weight: bold; margin: 10px; padding: 15px; padding-top: 10px; padding-bottom: 20px; margin-left: 25px;'>" + ( y + 1 ) + ". " + lbArray[ y ][ "name" ] + "</p></div>";
+				}
+				leaderboardData += '</div><div class="column">'
+				for( var y = 0; y < lbArray.length; y++ ) {
+					leaderboardData += "<div style='height: 50px;'><p id='ldata" + y + "' style='font-size: " + fontSize + "; font-family: sans-serif; font-weight: bold; margin-top: 10px; margin-left: 80px; margin-right: 25px; padding: 10px; width: 140px;'>" + lbArray[ y ][ filter ] + "</p></div>";
+				}
+				leaderboardData += "</div></div>";
+				document.getElementById( "leaderboarddata" ).innerHTML = leaderboardData;
+			}
+			
+			document.getElementById( "lbtype" ).onchange = makeLeaderboard;
+			document.getElementById( "lbfilter" ).onchange = makeLeaderboard;
+			
+			var login = {
+				"Log In" : function() {
+					showModal( "login" );
+				},
+				/*"Locker" : function() {
+					showModal( "locker" );
+				},*/
+				"Leaderboards" : function() {
+					var xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function() {
+						if( this.readyState == 4 && this.status == 200 ) {
+							leaderboardJSON = JSON.parse( xhttp.responseText );
+							makeLeaderboard();
+						}
+					};
+					xhttp.open( "GET", "https://login.buildroyale.io/leaderboards", true );
+					xhttp.send();
+					showModal( "leaderboards" );
+					console.log( "Here" );
+				},
+				/*"Shop" : function() {
+					
+				}*/
+			};
+			
+			var loggedIn = {
+				"Account" : function() {
+					showModal( "account" );
+				},
+				/*"Locker" : function() {
+					showModal( "locker" );
+				},*/
+				/*"Shop" : function() {
+					
+				},*/
+				"Leaderboards" : login[ "Leaderboards" ],
+				"Sign Out" : function() {
+					signOut();
+				}
+			};
+			
+			function showLogin() {
+				var keys = Object.keys( login );
+				var str = "";
+				for( var i = 0; i < keys.length; i++ ) {
+					str += '<div id="login' + i + '"class="navitem">' + keys[ i ] + "</div>";
+					if( i < keys.length - 1 ) {
+						str += '<div class="navbreak"> | </div>'
+					}
+				}
+				document.getElementById( "nav" ).innerHTML = str;
+				for( var i = 0; i < keys.length; i++ ) {
+					document.getElementById( "login" + i ).onclick = login[ keys[ i ] ];
+				}
+			}
+			function showLoggedIn() {
+				var keys = Object.keys( loggedIn );
+				var str = "";
+				for( var i = 0; i < keys.length; i++ ) {
+					str += '<div id="loggedin' + i + '"class="navitem">' + keys[ i ] + "</div>";
+					if( i < keys.length - 1 ) {
+						str += '<div class="navbreak"> | </div>'
+					}
+				}
+				document.getElementById( "nav" ).innerHTML = str;
+				for( var i = 0; i < keys.length; i++ ) {
+					document.getElementById( "loggedin" + i ).onclick = loggedIn[ keys[ i ] ];
+				}
+			}
+			showLogin();
+			
+			var statPlaylists = [
+				"Total Stats",
+				"Solo",
+				"Duos",
+				"Squads"
+			];
+			var statTypes = [
+				"Games Played",
+				"Wins",
+				"Top 10's",
+				"Eliminations"
+			];
+			var accountData = "";
+			for( var x = 0; x < statPlaylists.length; x++ ) {
+				accountData += '<div class="modaltitle" style="padding-bottom: 0px;">' + statPlaylists[ x ] + '</div>';
+				accountData += '<div class="row" style="padding-top: 10px;"><div class="column">';
+				for( var y = 0; y < statTypes.length; y++ ) {
+					accountData += "<div style='height: 60px;'><p style='text-align: left; font-family: sans-serif; font-weight: bold; margin: 20px; padding: 15px; padding-top: 10px; padding-bottom: 20px; margin-left: 25px;'>" + statTypes[ y ] + "</p></div>";
+				}
+				accountData += '</div><div class="column">'
+				for( var y = 0; y < statTypes.length; y++ ) {
+					accountData += "<div style='height: 60px;'><p id='data" + x + y + "' class='bind keybindbutton' style='font-family: sans-serif; font-weight: bold; margin-top: 20px; margin-left: auto; margin-right: 25px; padding: 7px; border: solid 3px #000; width: 140px;'>" + 6969 + "</p></div>";
+				}
+				accountData += "</div></div>";
+			}
+			document.getElementById( "accountdata" ).innerHTML = accountData;
+			
+			function onSignIn( googleUser ) {
+				var profile = googleUser.getBasicProfile();
+				console.log( "ID: " + profile.getId() ); // Do not send to your backend! Use an ID token instead.
+				console.log( "Name: " + profile.getName() );
+				console.log( "Image URL: " + profile.getImageUrl() );
+				console.log( "Email: " + profile.getEmail() ); // This is null if the 'email' scope is not present.
+				
+				var id_token = googleUser.getAuthResponse().id_token;
+				console.log( googleUser.getAuthResponse() );
+				var xhr = new XMLHttpRequest();
+				xhr.open( "POST", "https://login.buildroyale.io/login" );
+				xhr.setRequestHeader( "Content-Type", "application/x-www-form-urlencoded" );
+				xhr.onload = function() {
+					console.log( xhr.responseText );
+					var data = JSON.parse( xhr.responseText );
+					console.log( data );
+					var totals = [ 0, 0, 0, 0 ];
+					window.skins = data.splice( data.length - 1, 1 )[ 0 ];
+					if( window.updateSkins != undefined ) {
+						window.updateSkins();
+					}
+					var token = data.splice( 3, 1 )[ 0 ];
+					console.log( token );
+					window.token = token;
+					for( var x = 0; x < data.length; x++ ) {
+						for( var y = 0; y < data[ x ].length; y++ ) {
+							document.getElementById( "data" + ( x + 1 ) + y ).innerHTML = data[ x ][ y ];
+							totals[ y ] += data[ x ][ y ];
+						}
+					}
+					console.log( data );
+					for( var i = 0; i < totals.length; i++ ) {
+						document.getElementById( "data0" + i ).innerHTML = totals[ i ];
+					}
+				};
+				xhr.send( "idtoken=" + id_token );
+				window.token = id_token;
+				showLoggedIn();
+				hideAllModals()
+			}
+			function onFailure( error ) {
+				console.log( error );
+				showLogin();
+				hideAllModals();
+			}
+			function signOut() {
+				delete window.token;
+				var auth2 = gapi.auth2.getAuthInstance();
+				auth2.signOut().then( function () {
+					console.log( "User signed out." );
+				} );
+				showLogin();
+				hideAllModals();
+			}
+			
+			window.groundColor = "#2d570b";
+			window.groundColor = "#40570b";
+			document.body.style.backgroundColor = window.groundColor;
+		</script>
+		<div style="height: 10px;"></div>
+		<img id="bus" alt="bus" src="buildart/bus.png">
+		<img id="player" alt="player" src="buildart/player.png">
+		<img id="customplayer0" alt="customplayer0" src="buildart/player0.png">
+		<img id="customhair0" alt="customhair0" src="buildart/customhair0.png">
+		<img id="backpack0" alt="backpack0" src="buildart/backpack0.png">
+		<img id="custompic0" alt="custompic0" src="buildart/custompic0.png">
+		<img id="customplayer1" alt="customplayer1" src="buildart/player1.png">
+		<img id="customhair1" alt="customhair1" src="buildart/customhair1.png">
+		<img id="backpack1" alt="backpack1" src="buildart/backpack1.png">
+		<img id="custompic1" alt="custompic1" src="buildart/custompic0.png">
+		<img id="customplayer2" alt="customplayer2" src="buildart/player2.png">
+		<img id="customhair2" alt="customhair2" src="buildart/customhair2.png">
+		<img id="backpack2" alt="backpack2" src="buildart/blank.png">
+		<img id="custompic2" alt="custompic2" src="buildart/picaxe.png">
+		<img id="customplayer3" alt="customplayer3" src="buildart/player3.png">
+		<img id="customhair3" alt="customhair3" src="buildart/customhair3.png">
+		<img id="backpack3" alt="backpack3" src="buildart/blank.png">
+		<img id="custompic3" alt="custompic3" src="buildart/custompic3.png">
+		<img id="customplayer4" alt="customplayer4" src="buildart/player4.png">
+		<img id="customhair4" alt="customhair4" src="buildart/customhair4.png">
+		<img id="backpack4" alt="backpack4" src="buildart/backpack4.png">
+		<img id="custompic4" alt="custompic4" src="buildart/picaxe.png">
+		<img id="player5" alt="player5" src="buildart/player5.png">
+		<img id="customhair5" alt="customhair5" src="buildart/customhair5.png">
+		<img id="backpack5" alt="backpack5" src="buildart/blank.png">
+		<img id="custompic5" alt="custompic5" src="buildart/picaxe.png">
+		<!--<img id="tree0" alt="tree0" src="buildart/tree0.png">-->
+		<img id="tree0" alt="tree0" src="buildart/falltree.png">
+		<img id="tree1" alt="tree1" src="buildart/tree1.png">
+		<img id="darktree" alt="darktree" src="buildart/darktree.png">
+		<img id="darkrock" alt="darkrock" src="buildart/darkrock.png">
+		<img id="picaxe" alt="picaxe" src="buildart/picaxe.png">
+		<img id="scar" alt="scar" src="buildart/scar.png">
+		<img id="topscar" alt="topscar" src="buildart/topscar.png">
+		<img id="bolt" alt="bolt" src="buildart/bolt.png">
+		<img id="topbolt" alt="topbolt" src="buildart/topbolt.png">
+		<img id="lmg" alt="lmg" src="buildart/lmg.png">
+		<img id="toplmg" alt="toplmg" src="buildart/toplmg.png">
+		<img id="shotgun" alt="shotgun" src="buildart/shotgun.png">
+		<img id="topshotgun" alt="topshotgun" src="buildart/topshotgun.png">
+		<img id="smg" alt="smg" src="buildart/smg.png">
+		<img id="topsmg" alt="topsmg" src="buildart/topsmg.png">
+		<img id="ump" alt="ump" src="buildart/ump.png">
+		<img id="topump" alt="topump" src="buildart/topump.png">
+		<img id="rifle" alt="rifle" src="buildart/rifle.png">
+		<img id="toprifle" alt="toprifle" src="buildart/toprifle.png">
+		<img id="deagle" alt="deagle" src="buildart/deagle.png">
+		<img id="topdeagle" alt="topdeagle" src="buildart/topdeagle.png">
+		<img id="famas" alt="famas" src="buildart/famas.png">
+		<img id="topfamas" alt="topfamas" src="buildart/topfamas.png">
+		<img id="ar-15" alt="ar-15" src="buildart/ar15.png">
+		<img id="topar-15" alt="topar-15" src="buildart/topar15.png">
+		<img id="scoped ar" alt="scoped ar" src="buildart/scopedar.png">
+		<img id="topscoped ar" alt="topscoped ar" src="buildart/topscopedar.png">
+		<img id="heavy" alt="heavy" src="buildart/heavy.png">
+		<img id="topheavy" alt="topheavy" src="buildart/topheavy.png">
+		<img id="tommy gun" alt="tommy gun" src="buildart/tommygun.png">
+		<img id="toptommy gun" alt="toptommy gun" src="buildart/toptommygun.png">
+		<img id="drum" alt="drum" src="buildart/autoshotgun.png">
+		<img id="topdrum" alt="topdrum" src="buildart/topautoshotgun.png">
+		<img id="musket" alt="musket" src="buildart/musket.png">
+		<img id="topmusket" alt="topmusket" src="buildart/topmusket.png">
+		<img id="heavy sniper" alt="heavysniper" src="buildart/heavysniper.png">
+		<img id="topheavy sniper" alt="topheavysniper" src="buildart/topheavysniper.png">
+		<img id="rpg" alt="rpg" src="buildart/rpg.png">
+		<img id="toprpg" alt="toprpg" src="buildart/toprpg.png">
+		<img id="rocket" alt="rocket" src="buildart/rocket.png">
+		<img id="smoke0" alt="smoke0" src="buildart/smoke.png">
+		<img id="smoke1" alt="smoke1" src="buildart/smoke2.png">
+		<img id="blanksmoke0" alt="blanksmoke0" src="buildart/blanksmoke0.png">
+		<img id="redsmoke0" alt="redsmoke0" src="buildart/redsmoke0.png">
+		<img id="blacksmoke0" alt="blacksmoke0" src="buildart/blacksmoke0.png">
+		<img id="orangesmoke0" alt="orangesmoke0" src="buildart/orangesmoke0.png">
+		<img id="yellowsmoke0" alt="yellowsmoke0" src="buildart/yellowsmoke0.png">
+		<img id="wood" alt="wood" src="buildart/wood.png">
+		<img id="brick" alt="brick" src="buildart/brick.png">
+		<img id="metal" alt="metal" src="buildart/metal.png">
+		<img id="grid" alt="grid" src="buildart/grid.png">
+		<img id="gridshine" alt="gridshine" src="buildart/gridshine.png">
+		<img id="woodwall0" alt="woodwall0" src="buildart/wood0.png">
+		<img id="woodwall1" alt="woodwall1" src="buildart/wood1.png">
+		<img id="woodwall2" alt="woodwall2" src="buildart/wood2.png">
+		<img id="brickwall0" alt="brickwall0" src="buildart/brick0.png">
+		<img id="brickwall1" alt="brickwall1" src="buildart/brick1.png">
+		<img id="brickwall2" alt="brickwall2" src="buildart/brick2.png">
+		<img id="metalwall0" alt="metalwall0" src="buildart/metal0.png">
+		<img id="metalwall1" alt="metalwall1" src="buildart/metal1.png">
+		<img id="metalwall2" alt="metalwall2" src="buildart/metal2.png">
+		<img id="spectate" alt="spectate" src="buildart/spectate.png">
+		<img id="inv0" alt="inv0" src="buildart/inv0.png">
+		<img id="inv1" alt="inv1" src="buildart/inv1.png">
+		<img id="inv2" alt="inv2" src="buildart/inv2.png">
+		<img id="inv3" alt="inv3" src="buildart/inv3.png">
+		<img id="inv4" alt="inv4" src="buildart/inv4.png">
+		<!--<img id="leaf0" alt="leaf0" src="buildart/leaf0.png">-->
+		<img id="leaf0" alt="leaf0" src="buildart/leaf1.png">
+		<img id="leaf1" alt="leaf1" src="buildart/leaf1.png">
+		<img id="bluewood" alt="bluewood" src="buildart/bluewood.png">
+		<img id="redwood" alt="redwood" src="buildart/redwood.png">
+		<img id="bluebrick" alt="bluebrick" src="buildart/bluebrick.png">
+		<img id="redbrick" alt="redbrick" src="buildart/redbrick.png">
+		<img id="bluemetal" alt="bluemetal" src="buildart/bluemetal.png">
+		<img id="redmetal" alt="redmetal" src="buildart/redmetal.png">
+		<img id="blueprint" alt="blueprint" src="buildart/blueprint.png">
+		<img id="bullet" alt="bullet" src="buildart/mediumbullet.png">
+		<img id="shotgunbullet" alt="shotgunbullet" src="buildart/pellet.png">
+		<img id="flash0" alt="flash0" src="buildart/flash0.png">
+		<img id="flash1" alt="flash1" src="buildart/flash1.png">
+		<img id="flash2" alt="flash2" src="buildart/flash2.png">
+		<img id="pebble" alt="pebble" src="buildart/pebble.png">
+		<img id="rock" alt="rock" src="buildart/rock.png">
+		<img id="trash" alt="trash" src="buildart/trash.png">
+		<img id="scrap0" alt="scrap0" src="buildart/scrap0.png">
+		<img id="scrap1" alt="scrap1" src="buildart/scrap1.png">
+		<img id="redarrow" alt="redarrow" src="buildart/redindicator.png">
+		<img id="bluearrow" alt="bluearrow" src="buildart/blueindicator.png">
+		
+		<img id="hair0" alt="hair0" src="buildart/farmerhat.png">
+		<img id="player0" alt="player0" src="buildart/farmerbody.png">
+		<img id="hair1" alt="hair1" src="buildart/skeletonhead.png">
+		<img id="player1" alt="player1" src="buildart/skeletonbody.png">
+		<img id="hair2" alt="hair2" src="buildart/pumpkinhead.png">
+		<img id="player2" alt="player2" src="buildart/pumpkinbody.png">
+		<img id="hair3" alt="hair3" src="buildart/spiderhead.png">
+		<img id="player3" alt="player3" src="buildart/spiderbody.png">
+		<!--<img id="hair0" alt="hair0" src="buildart/hair0.png">
+		<img id="hair1" alt="hair1" src="buildart/hair1.png">
+		<img id="hair2" alt="hair2" src="buildart/pumpkinhead.png">
+		<img id="hair3" alt="hair3" src="buildart/hair3.png">-->
+		
+		<img id="wave" alt="wave" src="buildart/wave.png">
+		<img id="field" alt="field" src="buildart/field.png">
+		<img id="corn" alt="corn" src="buildart/corn.png">
+		<img id="pumpkin" alt="pumpkin" src="buildart/pumpkinunder.png">
+		<img id="pumpkin1" alt="pumpkin1" src="buildart/pumpkinover.png">
+		<img id="hay" alt="hay" src="buildart/hay.png">
+		<img id="barn" alt="barn" src="buildart/barn.png">
+		<img id="barnroof" alt="barnroof" src="buildart/barnroof.png">
+		<img id="shack" alt="shack" src="buildart/shack.png">
+		<img id="shackroof" alt="shackroof" src="buildart/shackroof.png">
+		<img id="house0" alt="house0" src="buildart/house0.png">
+		<img id="house0roof" alt="house0roof" src="buildart/house0roof.png">
+		<img id="house1" alt="house1" src="buildart/house1.png">
+		<img id="house1roof" alt="house1roof" src="buildart/house1roof.png">
+		<img id="house2" alt="house2" src="buildart/house2.png">
+		<img id="house2roof" alt="house2roof" src="buildart/house2roof.png">
+		<img id="house3" alt="house3" src="buildart/house3.png">
+		<img id="house3roof" alt="house3roof" src="buildart/house3roof.png">
+		<img id="house4" alt="house4" src="buildart/house4.png">
+		<img id="house4roof" alt="house4roof" src="buildart/house4roof.png">
+		<img id="house5" alt="house5" src="buildart/house5.png">
+		<img id="house5roof" alt="house5roof" src="buildart/house5roof.png">
+		<img id="potatopalace" alt="potatopalace" src="buildart/potatopalace.png">
+		<img id="potatopalaceroof" alt="potatopalaceroof" src="buildart/potatopalaceroof.png">
+		<img id="container" alt="container" src="buildart/container.png">
+		<img id="containerroof" alt="containerroof" src="buildart/containerroof.png">
+		<img id="gym" alt="gym" src="buildart/gym.png">
+		<img id="gymroof" alt="gymroof" src="buildart/gymroof.png">
+		<img id="castletopleft" alt="castletopleft" src="buildart/castletopleft.png">
+		<img id="castletopleftroof" alt="castletopleftroof" src="buildart/castletopleftroof.png">
+		<img id="castletopright" alt="castletopright" src="buildart/castletopright.png">
+		<img id="castletoprightroof" alt="castletoprightroof" src="buildart/castletoprightroof.png">
+		<img id="castlebottomleft" alt="castlebottomleft" src="buildart/castlebottomleft.png">
+		<img id="castlebottomleftroof" alt="castlebottomleftroof" src="buildart/castlebottomleftroof.png">
+		<img id="castlebottomright" alt="castlebottomright" src="buildart/castlebottomright.png">
+		<img id="castlebottomrightroof" alt="castlebottomrightroof" src="buildart/castlebottomrightroof.png">
+		<img id="castlecenter" alt="castlecenter" src="buildart/castlecenter.png">
+		<img id="castlecenterroof" alt="castlecenterroof" src="buildart/castlecenterroof.png">
+		<img id="dirt" alt="dirt" src="buildart/dirt.png">
+		<img id="dirtcurve" alt="dirtcurve" src="buildart/dirtcurve.png">
+		<img id="road" alt="road" src="buildart/road.png">
+		<img id="smallroad" alt="smallroad" src="buildart/smallroad.png">
+		<img id="roadcurve" alt="roadcurve" src="buildart/roadcurve.png">
+		<img id="smallroadcurve" alt="smallroadcurve" src="buildart/smallroadcurve.png">
+		<img id="chest" alt="chest" src="buildart/chest.png">
+		<img id="chestunder" alt="chestunder" src="buildart/chestunder.png">
+		<img id="pool" alt="pool" src="buildart/pool.png">
+		<img id="lot" alt="lot" src="buildart/lot.png">
+		<img id="smalllot" alt="smalllot" src="buildart/smalllot.png">
+		<img id="logo" alt="logo" src="buildart/logo.png">
+		<img id="inventoryammo0" alt="inventoryammo0" src="buildart/ammo0.png">
+		<img id="inventoryammo1" alt="inventoryammo1" src="buildart/ammo1.png">
+		<img id="inventoryammo2" alt="inventoryammo2" src="buildart/ammo2.png">
+		<img id="inventoryammo3" alt="inventoryammo3" src="buildart/ammo3.png">
+		<img id="shield" alt="shield" src="buildart/shield.png">
+		<img id="health" alt="health" src="buildart/health.png">
+		<img id="mini" alt="mini" src="buildart/mini.png">
+		<img id="pot" alt="pot" src="buildart/pot.png">
+		<img id="bandages" alt="bandages" src="buildart/bandages.png">
+		<img id="medkit" alt="medkit" src="buildart/medkit.png">
+		<img id="chair" alt="chair" src="buildart/chair.png">
+		<img id="table" alt="table" src="buildart/table.png">
+		<img id="stack0" alt="stack0" src="buildart/stack0.png">
+		<img id="stack1" alt="stack1" src="buildart/stack1.png">
+		<img id="stack2" alt="stack2" src="buildart/stack2.png">
+		<img id="stack3" alt="stack3" src="buildart/stack3.png">
+		<img id="dirtbridge" alt="dirtbridge" src="buildart/dirtbridge.png">
+		<img id="roadbridge" alt="roadbridge" src="buildart/roadbridge.png">
+		<img id="stonebridge" alt="stonebridge" src="buildart/stonebridge.png">
+		<img id="pavilion" alt="pavilion" src="buildart/pavilion.png">
+		<img id="pavilionroof" alt="pavilionroof" src="buildart/pavilionroof.png">
+		<img id="cabin" alt="cabin" src="buildart/cabin.png">
+		<img id="cabinroof" alt="cabinroof" src="buildart/cabinroof.png">
+		<img id="counter" alt="counter" src="buildart/counter.png">
+		<img id="bench" alt="bench" src="buildart/bench.png">
+		<img id="metalbench" alt="metalbench" src="buildart/metalbench.png">
+		<img id="couch" alt="couch" src="buildart/couch.png">
+		<img id="silo" alt="silo" src="buildart/silo.png">
+		<img id="basketballnet" alt="basketballnet" src="buildart/basketballnet.png">
+		<img id="basketball" alt="basketball" src="buildart/basketball.png">
+		<img id="soccerball" alt="soccerball" src="buildart/soccerball.png">
+		<img id="soccerfield" alt="soccerfield" src="buildart/soccerfield.png">
+		<img id="smallsoccerfield" alt="smallsoccerfield" src="buildart/smallsoccerfield.png">
+		<img id="soccergoal" alt="soccergoal" src="buildart/blank.png">
+		<img id="soccergoalroof" alt="soccergoalroof" src="buildart/soccernet.png">
+		<img id="baller" alt="baller" src="buildart/baller.png">
+		<img id="baller0" alt="baller0" src="buildart/baller.png">
+		<img id="baller1" alt="baller1" src="buildart/baller1.png">
+		<img id="baller2" alt="baller2" src="buildart/baller2.png">
+		<img id="baller3" alt="baller3" src="buildart/baller3.png">
+		<img id="rope" alt="rope" src="buildart/rope.png">
+		<img id="grapple" alt="grapple" src="buildart/plunger.png">
+		<img id="victory" alt="victory" src="buildart/victory.png">
+		<img id="background" alt="background" src="buildart/newbackground.png">
+		<img id="waitingIcon" alt="waitingIcon" src="buildart/timer.png">
+		<img id="movingIcon" alt="movingIcon" src="buildart/storm.png">
+		<img id="killsIcon" alt="killsIcon" src="buildart/killsicon.png">
+		<img id="playersIcon" alt="playersIcon" src="buildart/playersicon.png">
+		<img id="switch" alt="switch" src="buildart/switch.png">
+		<!--<img id="christmastree0" alt="christmastree0" src="buildart/christmastree0.png">
+		<img id="christmastree1" alt="christmastree1" src="buildart/christmastree1.png">-->
+		<img id="grass0" alt="grass0" src="buildart/grass0.png">
+		<img id="grass1" alt="grass1" src="buildart/grass1.png">
+		<img id="grass2" alt="grass2" src="buildart/grass2.png">
+		<img id="revive" alt="revive" src="buildart/revive.png">
+		
+		<img id="redsheet" alt="redsheet" src="buildart/redsheet.png">
+		<img id="greensheet" alt="redsheet" src="buildart/greensheet.png">
+		<img id="redpewds" alt="redpewds" src="buildart/redpewds.png">
+		<img id="greenpewds" alt="greenpewds" src="buildart/greenpewds.png">
+		<!--<img id="redhawaii" alt="redhawaii" src="https://media.discordapp.net/attachments/560891872118046723/634428880618389514/hawaii.png">
+		<img id="greenhawaii" alt="greenhawaii" src="https://media.discordapp.net/attachments/560891872118046723/634428954740260868/white.png">
+		<img id="redlines" alt="redlines" src="https://media.discordapp.net/attachments/402240145996382211/629474076498591745/Untitled-1.png">
+		<img id="greenlines" alt="greenlines" src="https://media.discordapp.net/attachments/402240145996382211/629474426202751017/blue.png">
+		<img id="redrainbow" alt="redrainbow" src="https://media.discordapp.net/attachments/560891872118046723/634545477123178527/insta.png">
+		<img id="greenrainbow" alt="greenrainbow" src="https://media.discordapp.net/attachments/560891872118046723/634545876831961108/grey.png">-->
+		
+		<img id="empty" alt="empty" src="buildart/blank.png">
+	</body>
+</html>
