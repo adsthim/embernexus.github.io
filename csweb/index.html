@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #07004a;">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Counter Strike Online</title>
+    <link rel="stylesheet" href="TemplateData/css/style.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="author" content="FoxZin Studio">
+	<link rel="canonical" href="http://foxzin.com/">
+	<script src="Build/UnityLoader.js"></script>
+	<script src="TemplateData/load.js"></script>
+<!-- Yandex Games SDK -->
+<script src="https://yandex.ru/games/sdk/v2"></script>
+<script>
+        let ysdk;
+        function initSDK() {
+          YaGames
+                .init()
+                .then(ysdk_ => {
+                    ysdk = ysdk_;
+                    ysdk.adv.showFullscreenAdv({
+                        callbacks: {
+                            onClose: wasShown => {
+                               gameInstance.SendMessage('WebglConnect', 'ResumeGame');
+								console.info('adv closed!');
+                            }
+                        }
+                    });
+                })
+		}
+		function initSDKVideo() {
+        YaGames
+            .init()
+            .then(ysdk_ => {
+			ysdk = ysdk_;
+			ysdk.adv.showRewardedVideo({
+                callbacks: {
+                    onOpen: () => {
+                        console.log('Video ad open.');
+						gameInstance.SendMessage('WebglConnect', 'PauseGame');
+                    },
+                    onRewarded: () => {
+                        console.log('Rewarded!');
+						
+                    },
+                    onClose: () => {
+                        console.log('Video ad closed.');
+						gameInstance.SendMessage('WebglConnect', 'ResumeGame');
+                    }, 
+                    onError: (e) => {
+                        console.log('Error while open video ad:', e);
+                        gameInstance.SendMessage('WebglConnect', 'ResumeGame');
+                    }
+                }
+            });
+			})
+		}
+        
+</script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141196571-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141196571-1');
+</script>
+  </head>
+  <body>
+    <div class="keepRatio">
+		<div class="webgl-content">
+			
+			<a id="logoname" href="https://yandex.ru/games/play/125742/?app-id=125742#app-id=125742&catalog-session-uid=catalog-9122db0c-6614-5a5f-ba4f-241f85379600-1619224132246-aeef&rtx-reqid=11079847390724783616" target="_blank">More Games</a>
+			<div id="gameContainer"></div>
+		</div>
+		
+		<div id="loadingBlock">
+		<h1 class="subtitle">Counter Strike Online</h1>
+			<img class="logo-game" src="./features512.png">
+			<div id="progressBar">
+				<div style="margin-bottom:5px">Loading ...</div>
+				<div class="centered emptyBarbg">
+					<div id="emptyBar"></div>
+					<div id="fullBar"></div>
+				</div>
+			</div>
+			<div id="warningBrowserBlock" style="display:none;">
+				<div class="warningBrowserText">
+					Your browser may not be compatible with this website. For an optimal experience, we suggest you to download one of this popular web browsers.
+				</div>
+				<div class="browserIcons">
+					<span>Firefox browser</span>
+					<span>Chrome browser</span>
+					<span>Safari browser</span>
+				</div>
+			</div>
+			<div id="warningMobileBlock" style="display:none;">
+			</div>
+			<div class="cover" style="background-image: url(./features512.png)"></div>
+		</div>
+		<div id="errorBrowserBlock" style="display:none;">
+			<div id="errorContent">
+				<div id="errorBrowserText">
+					Your browser does not support WebGL. <br> You can download one of this popular web browsers.
+				</div>
+				<div class="browserIcons">
+					<span>Firefox browser</span>
+					<span>Chrome browser</span>
+					<span>Safari browser</span>
+				</div>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>
